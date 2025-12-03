@@ -8,7 +8,7 @@ Currently, you have to clone the repo and install it using pip.
 
 ```bash
 git clone git@github.com:Kszymhu/pyrbon.git
-pip install pyrbon
+pip install ./pyrbon
 ```
 
 ## Usage
