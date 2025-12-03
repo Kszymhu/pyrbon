@@ -1,0 +1,18 @@
+[build-system]
+requires=["hatchling"]
+build-backend="hatchling.build"
+
+[project]
+name = "pyrbon"
+version = "0.1.0"
+description = "Command-line tool for generating structures of various carbon allotropes."
+authors = [{ name="Kszymhu", email="emailsmieciowy785@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+pyrbon = "pyrbon.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pyrbon"]
