@@ -7,8 +7,7 @@ Pyrbon is a command-line tool for creating structures of carbon allotropes.
 Currently, you have to clone the repo and install it using pip.
 
 ```bash
-git clone git@github.com:Kszymhu/pyrbon.git
-pip install ./pyrbon
+pip install git+ssh://git@github.com/Kszymhu/pyrbon.git
 ```
 
 ## Usage
