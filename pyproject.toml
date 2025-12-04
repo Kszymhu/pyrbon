@@ -9,7 +9,7 @@ description = "Command-line tool for generating structures of various carbon all
 authors = [{ name="Kszymhu", email="emailsmieciowy785@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = ["pytest"]
 
 [project.scripts]
 pyrbon = "pyrbon.main:main"
