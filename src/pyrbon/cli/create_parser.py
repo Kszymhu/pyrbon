@@ -4,8 +4,10 @@ def create_parser() -> argparse.ArgumentParser:
     '''
     Create an argument parser.
 
-    :return: Argument parser
-    :rtype: argparse.ArgumentParser
+    Returns
+    -------
+    argument_parser: argparse.ArgumentParser
+        Argument parser.
     '''
     parser = argparse.ArgumentParser(
         prog='Pyrbon',
