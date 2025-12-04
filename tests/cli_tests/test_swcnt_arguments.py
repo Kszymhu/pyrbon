@@ -3,36 +3,34 @@ import pytest
 from pyrbon.cli.swcnt_arguments import SwcntArguments
 
 
-def test_instantiation_accepts_valid_arguments():
-    valid_dummy_a = 1
-    valid_dummy_b = 1.2
+VALID_DUMMY_A: int = 1
+INVALID_DUMMY_A: int = 2137
 
+VALID_DUMMY_B: float = 1.2
+INVALID_DUMMY_B: float = 2.137
+
+
+def test_instantiation_accepts_valid_arguments():
     swcnt_arguments = SwcntArguments(
-        valid_dummy_a,
-        valid_dummy_b
+        VALID_DUMMY_A,
+        VALID_DUMMY_B
     )
 
-    assert(swcnt_arguments.dummy_a == valid_dummy_a)
-    assert(swcnt_arguments.dummy_b == valid_dummy_b)
+    assert(swcnt_arguments.dummy_a == VALID_DUMMY_A)
+    assert(swcnt_arguments.dummy_b == VALID_DUMMY_B)
 
 
 def test_instantiation_rejects_invalid_dummy_a():
-    invalid_dummy_a = 2137
-    valid_dummy_b = 1.2
-
     with pytest.raises(ValueError):
         SwcntArguments(
-            invalid_dummy_a,
-            valid_dummy_b
+            INVALID_DUMMY_A,
+            VALID_DUMMY_B
         )
 
 
 def test_instantiation_rejects_invalid_dummy_b():
-    valid_dummy_a = 1
-    invalid_dummy_b = 2.137
-
     with pytest.raises(ValueError):
         SwcntArguments(
-            valid_dummy_a,
-            invalid_dummy_b
+            VALID_DUMMY_A,
+            INVALID_DUMMY_B
         )
