@@ -1,7 +1,7 @@
-FROM python:3.11
+FROM python:3.13
 WORKDIR /usr/local/pyrbon
 
-COPY pyproject.toml src/ ./ 
+COPY . .
 RUN pip install .
 
 RUN useradd pyrbon
