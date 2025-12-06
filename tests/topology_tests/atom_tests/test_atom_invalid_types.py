@@ -23,9 +23,25 @@ def test_constructor_rejects_coordinates_tuple():
         Atom(coordinates, element)
 
 
-def test_element_rejects_integer():
+def test_constructor_rejects_coordinates_none():
+    coordinates = None
+    element = 'H'
+
+    with pytest.raises(TypeError):
+        Atom(coordinates, element)
+
+
+def test_constructor_rejects_element_integer():
     coordinates = np.zeros((3,))
     element = 1
+
+    with pytest.raises(TypeError):
+        Atom(coordinates, element)
+    
+
+def test_constructor_rejects_element_none():
+    coordinates = np.zeros((3,))
+    element = None
 
     with pytest.raises(TypeError):
         Atom(coordinates, element)

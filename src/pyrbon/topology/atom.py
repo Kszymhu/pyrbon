@@ -32,9 +32,8 @@ class Atom:
         '''
         if not isinstance(coordinates, np.ndarray):
             raise TypeError(f'Coordinates have to be a NumPy array. Current: {type(coordinates)}')
-        elif coordinates.shape != (3,) and coordinates.shape != (3, 1) and coordinates.shape != (1, 3):
+        if coordinates.shape != (3,) and coordinates.shape != (3, 1) and coordinates.shape != (1, 3):
             raise ValueError(f'Coordinates have to be a NumPy array of shape either (3,), (3, 1) or (1, 3). Current: {coordinates.shape}')
-
         self._coordinates = coordinates.flatten()
 
         if not isinstance(element, str):

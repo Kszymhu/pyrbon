@@ -38,7 +38,7 @@ def test_constructor_accepts_coordinates_shape_1_3() -> None:
     assert atom.element == element
 
 
-def test_constructor_accepts_empty_element() -> None:
+def test_constructor_accepts_element_empty_str() -> None:
     coordinates = np.zeros((3))
     element = ''
 
