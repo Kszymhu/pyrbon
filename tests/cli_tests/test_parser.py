@@ -11,3 +11,10 @@ def test_parser_throws_error_no_generator() -> None:
 
     with pytest.raises(SystemExit):
         parser.parse_args([])
+
+
+def test_parser_throw_error_invalid_generator() -> None:
+    parser = create_parser()
+
+    with pytest.raises(SystemExit):
+        parser.parse_args(['shrimp'])
