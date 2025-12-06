@@ -1,14 +1,10 @@
-# Use the slim python package
-FROM python:3.11-slim
+FROM python:3.11
+WORKDIR /usr/local/pyrbon
 
-# Set the working directory
-WORKDIR /app
-
-# Copy project files
 COPY pyproject.toml src/ ./ 
-
-# Install the package system-wide
 RUN pip install .
 
-# Expose the entrypoint
+RUN useradd pyrbon
+USER pyrbon
+
 ENTRYPOINT ["pyrbon"]
