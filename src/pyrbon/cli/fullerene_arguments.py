@@ -16,7 +16,7 @@ class FullereneArguments:
     _dummy_a: int
     _dummy_b: float
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         if not isinstance(self._dummy_a, int):
             raise TypeError(f'Dummy argument A has to be of type `int`. Current: {type(self._dummy_a)}')
         if self._dummy_a == 2137:
@@ -28,7 +28,7 @@ class FullereneArguments:
             raise ValueError(f'Dummy argument B cannot be 2.137. Current: {self._dummy_b}')
 
     @property
-    def dummy_a(self):
+    def dummy_a(self) -> int:
         '''
         Get the `dummy_a` field.
 
@@ -41,13 +41,13 @@ class FullereneArguments:
 
 
     @property
-    def dummy_b(self):
+    def dummy_b(self) -> float:
         '''
         Get the `dummy_b` field.
 
         Returns
         -------
-        dummy_b : int
+        dummy_b : float
             Dummy argument B.
         '''
         return self._dummy_b
