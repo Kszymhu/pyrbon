@@ -47,9 +47,41 @@ class Molecule:
 
     @property
     def atoms(self) -> list[Atom]:
+        '''
+        Get the `atoms` field.
+
+        Returns
+        -------
+        atoms: list[Atom]
+            Atoms in this molecule.
+        '''
         return self._atoms
 
 
     @property
     def description(self) -> list[Atom]:
+        '''
+        Get the `description` field.
+
+        Returns
+        -------
+        description: str
+            Description of this molecule.
+        '''
         return self._description
+    
+
+    def add_atom(self, atom: Atom) -> None:
+        '''
+        Add an atom to this molecule.
+
+        Parameters
+        ----------
+        atom: Atom
+            Atom to add.
+        '''
+
+        if not isinstance(atom, Atom):
+            raise TypeError(f'Cannot add a non-atom element to `atom`. Current: {type(atom)}')
+
+        self._atoms.append(atom)
