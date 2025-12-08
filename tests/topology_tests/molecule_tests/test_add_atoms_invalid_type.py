@@ -9,7 +9,7 @@ Molecule.add_atoms() should reject:
     - Anything that's not an Atom
 '''
 
-def test_add_atoms_rejects_int():
+def test_add_atoms_rejects_int() -> None:
     atom_a = Atom(np.array([0, 1, 2]), 'C')
     atom_b = 2137
 
@@ -19,7 +19,7 @@ def test_add_atoms_rejects_int():
         molecule.add_atom(atom_b)
 
 
-def test_add_atoms_rejects_list_of_atoms():
+def test_add_atoms_rejects_list_of_atoms() -> None:
     atom_a = Atom(np.array([0, 1, 2]), 'C')
     atom_b = [Atom(np.array([3, 4, 5]), 'C')]
 

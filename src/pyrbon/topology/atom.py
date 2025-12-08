@@ -65,3 +65,36 @@ class Atom:
             Element of the atom.
         '''
         return self._element
+    
+
+    def to_xyz_line(self, decimal_places: int = 5, sep: str = '') -> str:
+        '''
+        Generate a XYZ file line about the atom.
+
+        Parameters
+        ----------
+        decimal_places: int
+            Decimal places to include in the line (default: 5).
+        sep: str
+            Separator to put between sections of the line (default: whitespace).
+
+        Returns
+        -------
+        xyz_line: str
+            XYZ file line about the atom.
+        '''
+
+        if not isinstance(decimal_places, int):
+            raise TypeError(f'The number of decimal places has to be an int. Current: {type(decimal_places)}')
+        
+        if decimal_places < 0:
+            raise ValueError(f'The number of decimal places has to be at least 0. Current: {decimal_places}')
+        
+        if not isinstance(sep, str):
+            raise TypeError(f'The separator has to be a str. Current: {type(sep)}')
+
+        x_str = f'{self.coordinates[0]:.{decimal_places}f}'
+        y_str = f'{self.coordinates[1]:.{decimal_places}f}'
+        z_str = f'{self.coordinates[2]:.{decimal_places}f}'
+
+        return sep.join([self.element, x_str, y_str, z_str])
