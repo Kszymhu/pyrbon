@@ -6,6 +6,7 @@ from pyrbon.cli.fullerene_arguments import FullereneArguments
 from pyrbon.cli.graphene_arguments import GrapheneArguments
 from pyrbon.cli.graphite_arguments import GraphiteArguments
 from pyrbon.cli.mwcnt_arguments import MwcntArguments
+from pyrbon.cli.pah_arguments import PahArguments
 from pyrbon.cli.parchment_arguments import ParchmentArguments
 from pyrbon.cli.swcnt_arguments import SwcntArguments
 
@@ -15,6 +16,7 @@ type CommandArguments = Union[
     GrapheneArguments,
     GraphiteArguments,
     MwcntArguments,
+    PahArguments,
     ParchmentArguments,
     SwcntArguments
 ]
@@ -56,6 +58,11 @@ def get_command_arguments(arguments: argparse.Namespace) -> CommandArguments:
         )
     elif arguments.generator == 'mwcnt':
         return MwcntArguments(
+            arguments.dummy_a,
+            arguments.dummy_b
+        )
+    elif arguments.generator == 'pah':
+        return PahArguments(
             arguments.dummy_a,
             arguments.dummy_b
         )

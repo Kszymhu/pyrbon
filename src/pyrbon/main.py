@@ -8,6 +8,7 @@ from pyrbon.cli.fullerene_arguments import FullereneArguments
 from pyrbon.cli.graphene_arguments import GrapheneArguments
 from pyrbon.cli.graphite_arguments import GraphiteArguments
 from pyrbon.cli.mwcnt_arguments import MwcntArguments
+from pyrbon.cli.pah_arguments import PahArguments
 from pyrbon.cli.parchment_arguments import ParchmentArguments
 from pyrbon.cli.swcnt_arguments import SwcntArguments
 
@@ -22,11 +23,13 @@ def main() -> None:
     elif isinstance(command_arguments, FullereneArguments):
         print('Fullerene generator was chosen. Too bad it\'s not implemented yet.')
     elif isinstance(command_arguments, GrapheneArguments):
-        print('Graphene generator was chosen. Too bad it\'s not implemented yet. But it will be soon :3')
+        print('Graphene generator was chosen. Too bad it\'s not implemented yet.')
     elif isinstance(command_arguments, GraphiteArguments):
         print('Graphite generator was chosen. Too bad it\'s not implemented yet.')
     elif isinstance(command_arguments, MwcntArguments):
         print('MWCNT generator was chosen. Too bad it\'s not implemented yet.')
+    elif isinstance(command_arguments, PahArguments):
+        print('PAH generator was chosen. Too bad it\'s not implemented yet. But it will bee soon :3')
     elif isinstance(command_arguments, ParchmentArguments):
         print('Parchment MWCNT generator was chosen. Too bad it\'s not implemented yet.')
     elif isinstance(command_arguments, SwcntArguments):

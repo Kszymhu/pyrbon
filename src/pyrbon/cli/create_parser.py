@@ -120,6 +120,25 @@ def create_parser() -> argparse.ArgumentParser:
         help='Dummy argument B.'
     )
 
+    # PAH generator
+    pah_parser = subparsers.add_parser(
+        name='pah',
+        prog='Pyrbon Ppah',
+        description='Pyrbon\'s polycyclic aromatic hydrocarbon generator.',
+    )
+    pah_parser.add_argument(
+        '-a', '--dummy_a',
+        type=int,
+        required=True,
+        help='Dummy argument A.'
+    )
+    pah_parser.add_argument(
+        '-b', '--dummy_b',
+        type=float,
+        required=True,
+        help='Dummy argument B.'
+    )
+
     # Parchment generator
     parchment_parser = subparsers.add_parser(
         name='parchment',

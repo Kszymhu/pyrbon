@@ -22,6 +22,7 @@ Pyrbon [generator] [generator-specific arguments]
 - graphene - generate a graphene sheet
 - graphite - generate layers of graphite
 - mwcnt - generate a russian-doll model multi-walled carbon nanotube
+- pah - generate a policyclic aromatic hydrocarbon (not an allotrope but who cares)
 - parchment - generate a parchment model multi-walled carbon nanotube
 - swcnt - generate a single-walled carbon nanotube
 
@@ -38,7 +39,7 @@ Pyrbon diamond [arguments]
 #### Examples
 Dummy example
 ```bash
-Pyrbon diamond -a 21 -b 37
+Pyrbon diamond -a 21 -b 3.7
 ```
 
 ### Fullerene generator
@@ -54,7 +55,7 @@ Pyrbon fullerene [arguments]
 #### Examples
 Dummy example
 ```bash
-Pyrbon fullerene -a 21 -b 37
+Pyrbon fullerene -a 21 -b 3.7
 ```
 
 ### Graphene generator
@@ -70,7 +71,7 @@ Pyrbon graphene [arguments]
 #### Examples
 Dummy example
 ```bash
-Pyrbon graphene -a 21 -b 37
+Pyrbon graphene -a 21 -b 3.7
 ```
 
 ### Graphite generator
@@ -86,7 +87,7 @@ Pyrbon graphite [arguments]
 #### Examples
 Dummy example
 ```bash
-Pyrbon graphite -a 21 -b 37
+Pyrbon graphite -a 21 -b 3.7
 ```
 
 ### MWCNT generator
@@ -102,7 +103,23 @@ Pyrbon mwcnt [arguments]
 #### Examples
 Dummy example
 ```bash
-Pyrbon mwcnt -a 21 -b 37
+Pyrbon mwcnt -a 21 -b 3.7
+```
+
+### PAH generator
+#### Usage
+```bash
+Pyrbon pah [arguments]
+```
+
+#### Arguments
+- -a, --dummy_a INTEGER: dummy argument A
+- -b, --dummy_b FLOAT: dummy argument B
+
+#### Examples
+Dummy example
+```bash
+Pyrbon pah -a 21 -b 3.7
 ```
 
 ### Parchment generator
@@ -118,7 +135,7 @@ Pyrbon parchment [arguments]
 #### Examples
 Dummy example
 ```bash
-Pyrbon parchment -a 21 -b 37
+Pyrbon parchment -a 21 -b 3.7
 ```
 
 ### SWCNT generator
@@ -134,5 +151,5 @@ Pyrbon swcnt [arguments]
 #### Examples
 Dummy example
 ```bash
-Pyrbon swcnt -a 21 -b 37
+Pyrbon swcnt -a 21 -b 3.7
 ```
