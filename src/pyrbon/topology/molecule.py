@@ -85,3 +85,35 @@ class Molecule:
             raise TypeError(f'Cannot add a non-atom element to `atom`. Current: {type(atom)}')
 
         self._atoms.append(atom)
+    
+
+    def to_xyz_str(self, decimal_places: int = 5, sep: str = '') -> str:
+        '''
+        Generate a XYZ file str about the molecule.
+
+        Parameters
+        ----------
+        decimal_places: int
+            Decimal places to include in the atom lines (default: 5).
+        sep: str
+            Separator to put between sections of the atom lines (default: whitespace).
+
+        Returns
+        -------
+        xyz_str: str
+            XYZ file str about the atom.
+        '''
+
+        atom_lines: list[str] = []
+
+        atom_lines.append(str(len(self.atoms)))
+        atom_lines.append(self.description)
+
+        for atom in self.atoms:
+            atom_lines.append(atom.to_xyz_line(
+                decimal_places, sep
+            ))
+
+        xyz_str = '\n'.join(atom_lines)
+
+        return xyz_str

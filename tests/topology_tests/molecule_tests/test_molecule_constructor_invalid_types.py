@@ -19,7 +19,7 @@ def test_constructor_rejects_atoms_heterogenous_list() -> None:
     description = 'Molecule'
 
     with pytest.raises(TypeError):
-        molecule = Molecule(atoms, description)
+        Molecule(atoms, description)
 
 
 def test_constructor_rejects_description_none() -> None:
@@ -32,4 +32,4 @@ def test_constructor_rejects_description_none() -> None:
     description = None
 
     with pytest.raises(TypeError):
-        molecule = Molecule(atoms, description)
+        Molecule(atoms, description)

@@ -9,7 +9,7 @@ Molecule constructor should accept:
     - Any str for description
 '''
 
-def test_constructor_accepts_atoms_list() -> None:
+def test_constructor_works_with_atoms_list() -> None:
     atoms: list[Atom] = [
         Atom(np.array([1, 2, 3]), 'H'),
         Atom(np.array([4, 5, 6]), 'H'),
@@ -24,7 +24,7 @@ def test_constructor_accepts_atoms_list() -> None:
     assert(molecule.description == description)
 
 
-def test_constructor_accepts_single_atom() -> None:
+def test_constructor_works_with_single_atom() -> None:
     atoms = Atom(np.array([1, 2, 3]), 'H')
 
     description = 'Molecule'
@@ -35,7 +35,7 @@ def test_constructor_accepts_single_atom() -> None:
     assert(molecule.description == description)
 
 
-def test_constructor_accepts_none() -> None:
+def test_constructor_works_with_atoms_none() -> None:
     atoms = None
 
     description = 'Molecule'
@@ -46,7 +46,7 @@ def test_constructor_accepts_none() -> None:
     assert(molecule.description == description)
 
 
-def test_constructor_accepts_description_empty_str() -> None:
+def test_constructor_works_with_empty_description() -> None:
     atoms: list[Atom] = [
         Atom(np.array([1, 2, 3]), 'H'),
         Atom(np.array([4, 5, 6]), 'H'),

@@ -8,7 +8,7 @@ Atom constructor should accept:
     - Any str for `element`, including empty ones
 '''
 
-def test_constructor_accepts_coordinates_shape_3() -> None:
+def test_constructor_works_with_coordinates_shape_3() -> None:
     coordinates = np.zeros((3,))
     element = 'H'
 
@@ -18,7 +18,7 @@ def test_constructor_accepts_coordinates_shape_3() -> None:
     assert atom.element == element
 
 
-def test_constructor_accepts_coordinates_shape_3_1() -> None:
+def test_constructor_works_with_coordinates_shape_3_1() -> None:
     coordinates = np.zeros((3, 1))
     element = 'H'
 
@@ -28,7 +28,7 @@ def test_constructor_accepts_coordinates_shape_3_1() -> None:
     assert atom.element == element
 
 
-def test_constructor_accepts_coordinates_shape_1_3() -> None:
+def test_constructor_works_with_coordinates_shape_1_3() -> None:
     coordinates = np.zeros((1, 3))
     element = 'H'
 
@@ -38,7 +38,7 @@ def test_constructor_accepts_coordinates_shape_1_3() -> None:
     assert atom.element == element
 
 
-def test_constructor_accepts_element_empty_str() -> None:
+def test_constructor_works_with_element_empty_str() -> None:
     coordinates = np.zeros((3))
     element = ''
 

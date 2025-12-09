@@ -6,7 +6,7 @@ from pyrbon.topology.atom import Atom
 Atom.to_xyz_line() should work with any allowed decimal places and separators.
 '''
 
-def test_to_xyz_line_accepts_regular() -> None:
+def test_to_xyz_line_works() -> None:
     atom = Atom(np.array([1, 2, 3]), 'C')
     
     xyz_line = atom.to_xyz_line(decimal_places=5, sep=' ')
@@ -14,7 +14,7 @@ def test_to_xyz_line_accepts_regular() -> None:
     assert xyz_line == 'C 1.00000 2.00000 3.00000'
 
 
-def test_to_xyz_line_accepts_ungodly() -> None:
+def test_to_xyz_line_works_with_ungodly_arguments() -> None:
     atom = Atom(np.array([1, 2, 3]), 'C')
 
     xyz_line = atom.to_xyz_line(decimal_places=20, sep='shrimp')
